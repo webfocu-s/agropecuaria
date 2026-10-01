@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-terra-50: #f7f2e7;
+  --color-terra-100: #efe6d2;
+  --color-terra-900: #211d14;
+
+  --color-pasture-900: #1e3320;
+  --color-pasture-800: #274429;
+  --color-pasture-700: #305632;
+  --color-pasture-600: #3f6f3f;
+  --color-pasture-500: #4c8c3a;
+  --color-pasture-100: #dfe9d3;
+
+  --color-clay-600: #b8571e;
+  --color-clay-500: #d9762b;
+  --color-clay-400: #e5923f;
+  --color-clay-100: #fbe4cb;
+
+  --color-ink-900: #1c1a15;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-terra-50);
+  color: var(--color-ink-900);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: var(--color-clay-400);
+  color: var(--color-terra-50);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-clay-500);
+  outline-offset: 3px;
+}
